@@ -1,0 +1,14 @@
+[Unit]
+Description=reposilite service for maven artifact
+After=network-online.target
+
+[Service]
+User=root
+Group=root
+
+WorkingDirectory=/opt/reposilite
+ExecStart=/usr/bin/java  -Xmx32M -Dreposilite.port=8082 -jar /opt/reposilite/reposilite-3.0.3-all.jar
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
