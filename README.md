@@ -1,5 +1,3 @@
-# How-to-create-a-Systemd-service-in-Linux
-
 ### Create systemd service
 You can find running linux service under path **/etc/systemd/system**
 `cd /etc/systemd/system`
@@ -22,15 +20,19 @@ Restart=always
 WantedBy=multi-user.target
 
 ```
-After you finish reload the service files to include the new service.
+### After you finish reload the service files to include the new service.
+`sudo systemctl daemon-reload`
 
 ### Start your new service
 `sudo systemctl start [your_new_service].service`
-Check the status of your new service e.g (my new service called unixcop.service)
-`sudo systemctl status unixcop.service`
-Enable your service on every reboot
-`sudo systemctl enable unixcop.service`
-To disable your service on every reboot
-`sudo systemctl disable unixcop.service`
+
+### Check the status of your new service e.g (my new service called unixcop.service)
+`sudo systemctl reposilite.service`
+
+### Enable your service on every reboot
+`sudo systemctl enable reposilite.service`
+
+### To disable your service on every reboot
+`sudo systemctl disable reposilite.service`
 
 ###
