@@ -37,3 +37,20 @@ WantedBy=multi-user.target
 `sudo systemctl disable reposilite.service`
 
 ###
+### Wildfly 
+```
+[Unit]
+Description=wildfly service for vdoxx
+After=network-online.target
+
+[Service]
+User=root
+Group=root
+
+WorkingDirectory=/opt/vdoxx
+ExecStart=/usr/bin/sh /opt/vdoxx/jboss/bin/standalone.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+```
